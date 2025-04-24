@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10 Java Programs (JS Version)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+    }
+    button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Java Programs in JavaScript</h1>
+
+  <button onclick="helloWorld()">1. Hello World</button>
+  <button onclick="addNumbers()">2. Add Two Numbers</button>
+  <button onclick="checkEvenOdd()">3. Even or Odd</button>
+  <button onclick="factorial()">4. Factorial</button>
+  <button onclick="multiplicationTable()">5. Multiplication Table</button>
+  <button onclick="reverseString()">6. Reverse a String</button>
+  <button onclick="checkPalindrome()">7. Palindrome Checker</button>
+  <button onclick="calculator()">8. Simple Calculator</button>
+  <button onclick="findLargest()">9. Largest of Three</button>
+  <button onclick="guessingGame()">10. Number Guessing Game</button>
+
+  <script>
+    function helloWorld() {
+      alert("Hello, World!");
+    }
+
+    function addNumbers() {
+      let a = +prompt("Enter first number:");
+      let b = +prompt("Enter second number:");
+      alert("Sum: " + (a + b));
+    }
+
+    function checkEvenOdd() {
+      let num = +prompt("Enter a number:");
+      alert(num % 2 === 0 ? "Even" : "Odd");
+    }
+
+    function factorial() {
+      let n = +prompt("Enter a number:");
+      let fact = 1;
+      for (let i = 1; i <= n; i++) {
+        fact *= i;
+      }
+      alert("Factorial: " + fact);
+    }
+
+    function multiplicationTable() {
+      let n = +prompt("Enter a number:");
+      let result = "";
+      for (let i = 1; i <= 10; i++) {
+        result += `${n} x ${i} = ${n * i}\n`;
+      }
+      alert(result);
+    }
+
+    function reverseString() {
+      let str = prompt("Enter a string:");
+      let reversed = str.split("").reverse().join("");
+      alert("Reversed: " + reversed);
+    }
+
+    function checkPalindrome() {
+      let str = prompt("Enter a word:");
+      let reversed = str.split("").reverse().join("");
+      alert(str === reversed ? "Palindrome" : "Not a palindrome");
+    }
+
+    function calculator() {
+      let a = parseFloat(prompt("First number:"));
+      let b = parseFloat(prompt("Second number:"));
+      let op = prompt("Enter operation (+, -, *, /):");
+      let result;
+      switch(op) {
+        case '+': result = a + b; break;
+        case '-': result = a - b; break;
+        case '*': result = a * b; break;
+        case '/': result = a / b; break;
+        default: result = "Invalid operator";
+      }
+      alert("Result: " + result);
+    }
+
+    function findLargest() {
+      let a = +prompt("Enter first number:");
+      let b = +prompt("Enter second number:");
+      let c = +prompt("Enter third number:");
+      let largest = (a > b && a > c) ? a : (b > c ? b : c);
+      alert("Largest is: " + largest);
+    }
+
+    function guessingGame() {
+      let secret = Math.floor(Math.random() * 10) + 1;
+      let guess = prompt("Guess a number between 1 and 10");
+      alert(guess == secret ? "Correct!" : "Wrong! The number was " + secret);
+    }
+  </script>
+
+</body>
+</html>

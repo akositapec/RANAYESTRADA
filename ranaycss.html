@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10 CSS Programs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background: steelblue;
+      margin: 10px auto;
+    }
+
+    /* 1. Hover Effect */
+    .hover-effect:hover {
+      background: crimson;
+    }
+
+    /* 2. Transition */
+    .transition {
+      transition: transform 0.3s ease;
+    }
+
+    .transition:hover {
+      transform: scale(1.2);
+    }
+
+    /* 3. Rotation */
+    .rotate:hover {
+      transform: rotate(45deg);
+    }
+
+    /* 4. Rounded Corners */
+    .rounded {
+      border-radius: 50%;
+    }
+
+    /* 5. Shadow Effect */
+    .shadow {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* 6. Gradient Background */
+    .gradient {
+      background: linear-gradient(to right, #00f, #0ff);
+    }
+
+    /* 7. Animation */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .animate {
+      animation: bounce 1s infinite;
+    }
+
+    /* 8. Text Styling */
+    .fancy-text {
+      font-size: 24px;
+      color: #333;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    /* 9. Flexbox Layout */
+    .flex-container {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .flex-item {
+      width: 80px;
+      height: 80px;
+      background: coral;
+    }
+
+    /* 10. Dark Mode Toggle */
+    .dark-mode {
+      background: #222;
+      color: white;
+    }
+
+    .dark-mode .box {
+      background: #444;
+    }
+
+    .toggle-btn {
+      display: block;
+      margin: 0 auto 20px;
+      padding: 10px 20px;
+      background: #000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+
+<h1>10 CSS Programs</h1>
+
+<!-- 1. Hover Effect -->
+<section>
+  <h2>1. Hover Effect</h2>
+  <div class="box hover-effect"></div>
+</section>
+
+<!-- 2. Transition -->
+<section>
+  <h2>2. Transition on Hover</h2>
+  <div class="box transition"></div>
+</section>
+
+<!-- 3. Rotation -->
+<section>
+  <h2>3. Rotate on Hover</h2>
+  <div class="box rotate"></div>
+</section>
+
+<!-- 4. Rounded Corners -->
+<section>
+  <h2>4. Rounded Corners</h2>
+  <div class="box rounded"></div>
+</section>
+
+<!-- 5. Shadow Effect -->
+<section>
+  <h2>5. Shadow Effect</h2>
+  <div class="box shadow"></div>
+</section>
+
+<!-- 6. Gradient Background -->
+<section>
+  <h2>6. Gradient Background</h2>
+  <div class="box gradient"></div>
+</section>
+
+<!-- 7. Animation -->
+<section>
+  <h2>7. Animation (Bounce)</h2>
+  <div class="box animate"></div>
+</section>
+
+<!-- 8. Text Styling -->
+<section>
+  <h2>8. Text Styling</h2>
+  <p class="fancy-text">Stylish Text Example</p>
+</section>
+
+<!-- 9. Flexbox Layout -->
+<section>
+  <h2>9. Flexbox Layout</h2>
+  <div class="flex-container">
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+  </div>
+</section>
+
+<!-- 10. Dark Mode -->
+<section id="darkSection">
+  <h2>10. Dark Mode
